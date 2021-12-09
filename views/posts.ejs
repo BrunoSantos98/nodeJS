@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <%- include('partials/head.ejs') %>
+</head>
+<body>
+    
+    <%- include('partials/header.ejs') %>
+    
+    <h1>Posts</h1>
+
+    <article>
+        <h2>Postes</h2>
+
+        <div class='posts'>
+
+            <% posts.forEach( item => { %>
+
+                <div class='post'>
+                    <h3>item.title</h3>
+                    <p>item.text</p>
+                </div>
+
+            <% }) %>
+
+        </div>
+
+    </article>
+    
+    <%- include('partials/footer.ejs') %>
+
+    <%- include("partials/foot.ejs")%>
+
+</body>
+</html>
