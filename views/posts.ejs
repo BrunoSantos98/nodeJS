@@ -17,8 +17,13 @@
             <% posts.forEach( item => { %>
 
                 <div class='post'>
-                    <h3>item.title</h3>
-                    <p>item.text</p>
+                    <h3> <%= item.title%> </h3>
+                    <p><%= item.text%> </p>
+                    <% if(item.stars){%>
+                        <% for( let index = 0; index < item.stars; index++ ) { %>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Star_icon_stylized.svg/1077px-Star_icon_stylized.svg.png" alt="Icon Star" width="20">
+                        <% } %>
+                    <% } %>
                 </div>
 
             <% }) %>
